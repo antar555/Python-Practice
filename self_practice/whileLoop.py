@@ -72,12 +72,62 @@
 # print_digit(digit)
 
 #Factorial
-def factorial(number):
-    result=1
-    while number>0:
-        result=result*number
-        number=number-1
-    print(result)
+# def factorial(number):
+#     result=1
+#     while number>0:
+#         result=result*number
+#         number=number-1
+#     print(result)
+#
+# number=int(input("Enter the number: "))
+# factorial(number)
+
+#CountDown
+
+# def countDown(number):
+#     while number>0:
+#         print(number)
+#         number=number-1
+#
+# number=int(input("Enter the number: "))
+# countDown(number)
+
+#Reverse a number
+# def reverse(number):
+#     while number!=0:
+#         temp=number%10
+#         number=number//10
+#         print(f"{temp}",end="")
+#
+# number=int(input("Enter the number: "))
+# reverse(number)
+
+#sum of digits
+
+# def sum_of_digits(number):
+#     sum=0
+#     while number!=0:
+#         temp=number%10
+#         number=number//10
+#         sum=sum+temp
+#     return sum
+#
+# number=int(input("Enter the number: "))
+# print(sum_of_digits(number))
+
+#Even number sequence
+
+def even_number_sequence(number):
+
+    count=0
+    while True:
+        if number%2==0:
+            count=count+1
+            number=int(input("Enter the number: "))
+
+        else:
+            break
+    return count
 
 number=int(input("Enter the number: "))
-factorial(number)
+print(even_number_sequence(number))
