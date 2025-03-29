@@ -27,3 +27,17 @@
 #     age=int(input("Enter your age: "))
 # print(f"your age is: {age}")
 
+# food=input("Enter the food you like (q to quit): ")
+#
+# while not food=="q":
+#     print(f"You like {food}")
+#     food=input("Enter another food you like: ")
+# print("bye")
+
+food=input("Enter your favourite food: ")
+
+while not food=="q":
+    print(f"This is your favourite {food}")
+    food=input("Enter your another favorite food: ")
+
+print("Bye")
