@@ -62,11 +62,22 @@
 
 #print digits of a number
 
-def print_digit(digit):
-    while digit!=0:
-        number=digit%10
-        print(number)
-        digit=digit//10
+# def print_digit(digit):
+#     while digit!=0:
+#         number=digit%10
+#         print(number)
+#         digit=digit//10
+#
+# digit=int(input("Enter the digit: "))
+# print_digit(digit)
 
-digit=int(input("Enter the digit: "))
-print_digit(digit)
+#Factorial
+def factorial(number):
+    result=1
+    while number>0:
+        result=result*number
+        number=number-1
+    print(result)
+
+number=int(input("Enter the number: "))
+factorial(number)
