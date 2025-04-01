@@ -19,3 +19,14 @@ def pattern2(number):
 
 number=int(input("Enter the number: "))
 pattern2(number)
+
+#pattern 3
+
+def pattern3(number):
+    for i in range(0,number+1,1):
+        for j in range(1,i+1,1):
+            print("*", end=" ")
+        print()
+
+number=int(input("Enter the number: "))
+pattern3(number)
