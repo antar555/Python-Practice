@@ -57,8 +57,3 @@
 # number=int(input("Enter the number of lines: "))
 # pattern5(number)
 
-def find_special_numbers():
-    for i in range(100,10000,1):
-
-
-find_special_numbers()

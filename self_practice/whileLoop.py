@@ -117,17 +117,28 @@
 
 #Even number sequence
 
-def even_number_sequence(number):
+# def even_number_sequence(number):
+#
+#     count=0
+#     while True:
+#         if number%2==0:
+#             count=count+1
+#             number=int(input("Enter the number: "))
+#
+#         else:
+#             break
+#     return count
+#
+# number=int(input("Enter the number: "))
+# print(even_number_sequence(number))
 
-    count=0
-    while True:
-        if number%2==0:
-            count=count+1
-            number=int(input("Enter the number: "))
 
-        else:
-            break
-    return count
+for i in range(110,115,1):
+    sum=0
+    while i!=0:
+        temp=i%10
 
-number=int(input("Enter the number: "))
-print(even_number_sequence(number))
+        i=i//10
+        sum=sum+temp
+
+    print(sum)
