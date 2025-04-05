@@ -44,15 +44,21 @@
 
 #Pettern 5
 
-def pattern5(number):
-    for i in range(0,number,1):
-        for j in range(1,number-i,1):
-            print(" ",end="")
-        for k in range(0,i+1,1):
-            print("*",end="")
-        print()
+# def pattern5(number):
+#     for i in range(0,number,1):
+#         for j in range(1,number-i,1):
+#             print(" ",end="")
+#         for k in range(0,i+1,1):
+#             print("*",end="")
+#         print()
+#
+#
+#
+# number=int(input("Enter the number of lines: "))
+# pattern5(number)
+
+def find_special_numbers():
+    for i in range(100,10000,1):
 
 
-
-number=int(input("Enter the number of lines: "))
-pattern5(number)
+find_special_numbers()
