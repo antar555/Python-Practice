@@ -133,12 +133,37 @@
 # print(even_number_sequence(number))
 
 
-for i in range(110,115,1):
-    sum=0
-    while i!=0:
-        temp=i%10
+# for i in range(110,115,1):
+#     sum=0
+#     while i!=0:
+#         temp=i%10
+#
+#         i=i//10
+#         sum=sum+temp
+#
+#     print(sum)
 
-        i=i//10
-        sum=sum+temp
+number=int(input("Enter a number: "))
+original_number=number
+get_number=[]
+while number!=0:
+    temp=number%10
 
-    print(sum)
+    number=number//10
+    get_number.append(temp)
+
+    print(temp)
+get_number.reverse()
+print(get_number)
+
+n=1
+sum=0
+for i in get_number:
+    print(i**n)
+    sum=sum+i**n
+    n=n+1
+print(sum)
+if original_number==sum:
+    print(f"{original_number} is a special number")
+else:
+    print("No")
