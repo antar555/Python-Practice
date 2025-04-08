@@ -157,6 +157,7 @@ get_number.reverse()
 print(get_number)
 
 n=1
+
 sum=0
 for i in get_number:
     print(i**n)
@@ -167,3 +168,4 @@ if original_number==sum:
     print(f"{original_number} is a special number")
 else:
     print("No")
+

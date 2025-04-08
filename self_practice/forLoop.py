@@ -57,3 +57,9 @@
 # number=int(input("Enter the number of lines: "))
 # pattern5(number)
 
+for i in range(1,10,1):
+    for j in range(1,10,1):
+        for k in range(1,10,1):
+            print(i,j,k,end=" ")
+        print()
+    print()
