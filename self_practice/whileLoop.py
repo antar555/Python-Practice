@@ -169,36 +169,38 @@
 # else:
 #     print("No")
 
-def is_special_number(number):
-    original_number=number
+# def is_special_number(number):
+#     original_number=number
+#
+#     get_number=[]
+#     while number!=0:
+#         temp=number%10
+#         number=number//10
+#         get_number.append(temp)
+#         print(temp)
+#     get_number.reverse()
+#     get_special_number(get_number,original_number)
+#
+# def get_special_number(get_number,original_number):
+#     print(get_number)
+#     n=1
+#     sum=0
+#     for i in get_number:
+#         print(i**n)
+#         sum=sum+i**n
+#         n=n+1
+#     check_special_number(sum,original_number)
+#
+# def check_special_number(sum,original_number):
+#     if sum==original_number:
+#         print("This is a special number")
+#     else:
+#         print("This is not a special number")
+#
+#
+#
+# number=int(input("Enter the number: "))
+# is_special_number(number)
 
-    get_number=[]
-    while number!=0:
-        temp=number%10
-        number=number//10
-        get_number.append(temp)
-        print(temp)
-    get_number.reverse()
-    get_special_number(get_number,original_number)
 
-def get_special_number(get_number,original_number):
-    print(get_number)
-    n=1
-    sum=0
-    for i in get_number:
-        print(i**n)
-        sum=sum+i**n
-        n=n+1
-    check_special_number(sum,original_number)
-
-def check_special_number(sum,original_number):
-    if sum==original_number:
-        print("This is a special number")
-    else:
-        print("This is not a special number")
-
-
-
-number=int(input("Enter the number: "))
-is_special_number(number)
 

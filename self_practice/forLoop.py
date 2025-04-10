@@ -64,11 +64,22 @@
 #         print()
 #     print()
 
+# def pattern(number):
+#     for i in range(1,number+1,1):
+#         for j in range(1,number+1,1):
+#             print(i,end=" ")
+#         print()
+#
+# number=int(input("Enter the number: "))
+# pattern(number)
+
 def pattern(number):
-    for i in range(1,number+1,1):
-        for j in range(1,number+1,1):
-            print(i,end=" ")
+    for i in range(0,number+1,1):
+        for j in range(1,i+1,1):
+            print(" ",end=" ")
+        for k in range(1,number+1-i,1):
+            print("*",end=" ")
         print()
 
-number=int(input("Enter the number: "))
+number=int(input("Enter the number of lines: "))
 pattern(number)
