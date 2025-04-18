@@ -11,3 +11,12 @@
 #     time.sleep(1)
 # print("Time's up!")
 
+# numbers = input("Enter 9 numbers separated by space: ").split()
+#
+# index = 0
+# for i in range(3):
+#     for j in range(3):
+#         print(numbers[index], end=" ")
+#         index += 1
+#     print()
+
