@@ -39,20 +39,31 @@
 #         break
 # print(check_for_factor(base,factor))
 
-def add(number1, number2):
-    print(number1+number2)
+# def add(number1, number2):
+#     print(number1+number2)
+#
+# def input_number():
+#     number1=int(input("Enter the number1: "))
+#     while number1<0:
+#         number1=int(input("Enter the number1: "))
+#
+#     number2=int(input("Enter the number2: "))
+#     while number2<0:
+#         number2=int(input("Enter the number2: "))
+#
+#     add(number1,number2)
+#
+#
+# input_number()
 
-def input_number():
-    number1=int(input("Enter the number1: "))
-    while number1<0:
-        number1=int(input("Enter the number1: "))
-
-    number2=int(input("Enter the number2: "))
-    while number2<0:
-        number2=int(input("Enter the number2: "))
-
-    add(number1,number2)
-
-
-input_number()
-
+def enough(cap,on,wait):
+    x=cap-on
+    y=on-wait
+    if wait<=x:
+        return 0
+    else:
+        return wait-x
+cap=int(input("Enter the capacity: "))
+on=int(input("Enter onboard: "))
+wait=int(input("Enter the waiting people number: "))
+print(enough(cap,on,wait))
