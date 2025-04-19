@@ -58,11 +58,11 @@
 
 def enough(cap,on,wait):
     x=cap-on
-    y=on-wait
+
     if wait<=x:
         return 0
     else:
-        return wait-x
+        return max(0,wait-x)
 cap=int(input("Enter the capacity: "))
 on=int(input("Enter onboard: "))
 wait=int(input("Enter the waiting people number: "))
