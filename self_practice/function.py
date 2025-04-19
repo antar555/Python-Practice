@@ -56,14 +56,32 @@
 #
 # input_number()
 
-def enough(cap,on,wait):
-    x=cap-on
+# def enough(cap,on,wait):
+#     x=cap-on
+#
+#     if wait<=x:
+#         return 0
+#     else:
+#         return max(0,wait-x)
+# cap=int(input("Enter the capacity: "))
+# on=int(input("Enter onboard: "))
+# wait=int(input("Enter the waiting people number: "))
+# print(enough(cap,on,wait))
 
-    if wait<=x:
+def descending_order(num):
+    if num==0:
         return 0
-    else:
-        return max(0,wait-x)
-cap=int(input("Enter the capacity: "))
-on=int(input("Enter onboard: "))
-wait=int(input("Enter the waiting people number: "))
-print(enough(cap,on,wait))
+    numbers=[]
+    while num!=0:
+        temp=num%10
+        num=num//10
+        numbers.append(temp)
+    numbers.sort(reverse=True)
+
+
+    return (int(''.join(str(i) for i in numbers)))
+
+
+num=int(input("Enter the number: "))
+
+print(descending_order(num))
