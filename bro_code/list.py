@@ -65,6 +65,44 @@
 # ]
 # students_name_score(students)
 
-def menu_items(menu):
+# def menu_items(menu):
+#     print(menu[1])
+#     print(menu[1][1])
+# menu=[
+#     ["Burger","Fries","Soda"],
+#     ["Pizza","Wings","Juice"]
+# ]
+# menu_items(menu)
+
+#Adding elements to a list
+#Append Method
+
+#Add items to end of the list using append method
+# lang=["C","Cpp","Java"]
+# lang.append("python")
+# lang.append("php")
+# print(lang)
+
+#A list can be also added using append
+
+# device=["Apple"]
+# device.append(["Google","Sony"])
+# print(device)
+
+#insert() method
+#This method allows to add items to the list at a specific position
+
+# lang=["C","Cpp","Java"]
+# lang.insert(0,"python")
+# print(lang)
+
+#extend() Method
+#add all items of one list in another list
+
+web_dev=["Django","Next JS","React JS"]
+lang=["Python","JS"]
+web_dev.extend(lang)
+print(web_dev)
+
 
 
