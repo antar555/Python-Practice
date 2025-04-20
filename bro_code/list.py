@@ -99,10 +99,12 @@
 #extend() Method
 #add all items of one list in another list
 
-web_dev=["Django","Next JS","React JS"]
-lang=["Python","JS"]
-web_dev.extend(lang)
-print(web_dev)
+# web_dev=["Django","Next JS","React JS"]
+# lang=["Python","JS"]
+# web_dev.extend(lang)
+# print(web_dev)
+
+
 
 
 
