@@ -68,10 +68,18 @@ even_numbers=[]
 def numbers(elements):
     count=0
 
+    # for i in range(len(elements)):
+    #     for j in range(len(elements)):
+    #         if i!=j and elements[i]==elements[j]:
+    #             count+=1
+    #
+    # print(count)
     for i in elements:
-        if i%2==0:
+        if elements.count(i)==1:
             count=count+1
+            print(i)
     print(count)
+
 
 
 
