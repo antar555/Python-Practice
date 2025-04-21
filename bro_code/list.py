@@ -104,6 +104,27 @@
 # web_dev.extend(lang)
 # print(web_dev)
 
+# numbers=[]
+# for i in range(5):
+#     x=int(input("Enter the number: "))
+#     numbers.append(x)
+# print(numbers)
+
+#split Method to input a list
+
+#input a list using split() method
+# n=int(input("Enter the number of elements: "))
+# numbers=input("Enter the numbers: ").split()
+#
+# for i in range(0,n):
+#     numbers[i]=int(numbers[i])
+# print(numbers)
+# print(type(numbers))
+
+# numbers=list(map(int, input("Enter the numbers: ").split()))
+numbers=list(map(int, input("Enter the number: ").split()))
+print(numbers)
+
 
 
 
