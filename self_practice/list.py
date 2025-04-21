@@ -66,8 +66,18 @@ even_numbers=[]
 # print(count_positives_count_negatives(arr))
 
 def numbers(elements):
+    count=0
+
     for i in elements:
-        print(i)
+        if i%2==0:
+            count=count+1
+    print(count)
+
+
+
+
+
+
 
 elements=list(map(int, input("Enter the elements: ").split()))
 numbers(elements)
