@@ -74,11 +74,24 @@ def numbers(elements):
     #             count+=1
     #
     # print(count)
+    # for i in elements:
+    #     if elements.count(i)==1:
+    #         count=count+1
+    #         print(i)
+    # print(count)
+
+    another_list=[]
     for i in elements:
-        if elements.count(i)==1:
+        if elements.count(i)>1 and i not in another_list:
+            another_list.append(i)
             count=count+1
-            print(i)
-    print(count)
+
+    print(another_list)
+
+
+
+
+    print(f"total number of unique duplicates: {count}")
 
 
 
