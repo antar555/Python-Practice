@@ -109,26 +109,36 @@ even_numbers=[]
 
 
 
-def unique_duplicates(elements):
-    count=0
-    another_list=[]
-    another_another_list=[]
+# def unique_duplicates(elements):
+#     count=0
+#     another_list=[]
+#     another_another_list=[]
+#     for i in elements:
+#         if elements.count(i)>1:
+#             another_list.append(i)
+#
+#     print(another_list)
+#     for i in another_list:
+#         if i not in another_another_list:
+#             another_another_list.append(i)
+#             count+=1
+#
+#     print(another_another_list)
+#     print(count)
+#
+#
+# elements=list(map(int, input("Enter the numbers: ").split()))
+# unique_duplicates(elements)
+
+def first_duplicate(elements):
     for i in elements:
         if elements.count(i)>1:
-            another_list.append(i)
-
-    print(another_list)
-    for i in another_list:
-        if i not in another_another_list:
-            another_another_list.append(i)
-            count+=1
-
-    print(another_another_list)
-    print(count)
+            print(i)
+            break
 
 
-elements=list(map(int, input("Enter the numbers: ").split()))
-unique_duplicates(elements)
+elements=list(map(int, input("Enter the elements: ").split()))
+first_duplicate(elements)
 
 
 
