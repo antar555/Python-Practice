@@ -65,48 +65,70 @@ even_numbers=[]
 # arr=[0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]
 # print(count_positives_count_negatives(arr))
 
-def numbers(elements):
+# def numbers(elements):
+#     count=0
+#
+#     # for i in range(len(elements)):
+#     #     for j in range(len(elements)):
+#     #         if i!=j and elements[i]==elements[j]:
+#     #             count+=1
+#     #
+#     # print(count)
+#     # for i in elements:
+#     #     if elements.count(i)==1:
+#     #         count=count+1
+#     #         print(i)
+#     # print(count)
+#
+#     another_list=[]
+#     for i in elements:
+#         if elements.count(i)>1 and i not in another_list:
+#             another_list.append(i)
+#             count=count+1
+#
+#     print(another_list)
+#
+#
+#
+#
+#     print(f"total number of unique duplicates: {count}")
+
+
+
+
+
+
+
+
+# elements=list(map(int, input("Enter the elements: ").split()))
+# numbers(elements)
+
+
+
+
+
+
+
+def unique_duplicates(elements):
     count=0
-
-    # for i in range(len(elements)):
-    #     for j in range(len(elements)):
-    #         if i!=j and elements[i]==elements[j]:
-    #             count+=1
-    #
-    # print(count)
-    # for i in elements:
-    #     if elements.count(i)==1:
-    #         count=count+1
-    #         print(i)
-    # print(count)
-
     another_list=[]
+    another_another_list=[]
     for i in elements:
-        if elements.count(i)>1 and i not in another_list:
+        if elements.count(i)>1:
             another_list.append(i)
-            count=count+1
 
     print(another_list)
+    for i in another_list:
+        if i not in another_another_list:
+            another_another_list.append(i)
+            count+=1
+
+    print(another_another_list)
+    print(count)
 
 
-
-
-    print(f"total number of unique duplicates: {count}")
-
-
-
-
-
-
-
-
-elements=list(map(int, input("Enter the elements: ").split()))
-numbers(elements)
-
-
-
-
-
+elements=list(map(int, input("Enter the numbers: ").split()))
+unique_duplicates(elements)
 
 
 
