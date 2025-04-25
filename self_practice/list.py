@@ -130,15 +130,46 @@ even_numbers=[]
 # elements=list(map(int, input("Enter the numbers: ").split()))
 # unique_duplicates(elements)
 
-def first_duplicate(elements):
-    for i in elements:
-        if elements.count(i)>1:
-            print(i)
-            break
+# def first_duplicate(elements):
+#     for i in elements:
+#         if elements.count(i)>1:
+#             print(i)
+#             break
+#
+#
+# elements=list(map(int, input("Enter the elements: ").split()))
+# first_duplicate(elements)
+
+# def indices(elements):
+#     sum=0
+#
+#     for i in elements:
+#         sum=sum+i
+#
+#
+#
+#     print(sum)
+#
+# elements=list(map(int, input("Enter the elements: ").split()))
+# indices(elements)
 
 
-elements=list(map(int, input("Enter the elements: ").split()))
-first_duplicate(elements)
+def find_difference(a,b):
+    mul_a=1
+    mul_b=1
+    for i in a:
+        mul_a=i*mul_a
+    for j in b:
+        mul_b=j*mul_b
+    return abs(mul_a-mul_b)
+
+a=list(map(int, input("Enter the list a: ").split()))
+b=list(map(int,input("Enter the list b: ").split()))
+print(find_difference(a,b))
+
+
+
+
 
 
 
