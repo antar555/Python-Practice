@@ -154,18 +154,35 @@ even_numbers=[]
 # indices(elements)
 
 
-def find_difference(a,b):
-    mul_a=1
-    mul_b=1
-    for i in a:
-        mul_a=i*mul_a
-    for j in b:
-        mul_b=j*mul_b
-    return abs(mul_a-mul_b)
+# def find_difference(a,b):
+#     mul_a=1
+#     mul_b=1
+#     for i in a:
+#         mul_a=i*mul_a
+#     for j in b:
+#         mul_b=j*mul_b
+#     return abs(mul_a-mul_b)
+#
+# a=list(map(int, input("Enter the list a: ").split()))
+# b=list(map(int,input("Enter the list b: ").split()))
+# print(find_difference(a,b))
 
-a=list(map(int, input("Enter the list a: ").split()))
-b=list(map(int,input("Enter the list b: ").split()))
-print(find_difference(a,b))
+#Create a list of five fruits. Replace the third fruit with "Mango".
+# list=["Pineapple","Orange","apple","Lemon","Pitch"]
+# list[2]="Mango"
+# print(list)
+
+#Given a list of five numbers, change the last two numbers to "Ten" and "Twenty".
+# list=[1,2,3,4,5]
+# list[3:5]=[10,20]
+# print(list)
+
+#You have a list of countries. Replace the second and third countries with "Canada", "Brazil", and "Germany".
+# list=["America","India","Singapore","Norway","Italy"]
+# list[1:4]=["Canada","Brazil","Germany"]
+# print(list)
+
+#
 
 
 
