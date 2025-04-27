@@ -122,9 +122,27 @@
 # print(type(numbers))
 
 # numbers=list(map(int, input("Enter the numbers: ").split()))
-numbers=list(map(int, input("Enter the number: ").split()))
-print(numbers)
+# numbers=list(map(int, input("Enter the number: ").split()))
+# print(numbers)
 
+#Changing item of list
+
+# list=["Rob","Jeniffer","Bob",1,2]
+# list[2]="Michael"
+# print(list)
+
+#Changing Multiple items using slicing operator
+# list=["Rob","Jeniffer","Bob",1,2]
+# list[2:4]=["Michael","Anderson","Emma"]
+# print(list)
+# list[2:4]=["Antar"]
+# print(list)
+
+#inserting a new item by insert method
+
+# list=["Rob","Jeniffer","Bob",1,2]
+# list.insert(2,"Mike")
+# print(list)
 
 
 
