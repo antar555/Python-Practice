@@ -144,6 +144,37 @@
 # list.insert(2,"Mike")
 # print(list)
 
+#Remove an item of list
+#remove() method
+# list=["John","Mike","David"]
+# list.remove("John") #Mention specific element
+# print(list)
+
+#pop() Method
+# list=["John","Mike","David"]
+# list.pop(1) #Mention index or not
+# print(list)
+
+# list=["John","Mike","David"]
+# list.pop()
+# print(list)
+
+#del keyword
+# list=["John","Mike","David"]
+# del list[0] #Mention index after del keyword
+# print(list)
+
+# list=["John","Mike","David"]
+# del list #deleted entire list
+# print(list)
+
+#clear() method
+#Clears the list rather then deleting
+# list=["John","Mike","David"]
+# list.clear()
+# print(list)
+
+
 
 
 

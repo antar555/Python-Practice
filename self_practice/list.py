@@ -182,7 +182,83 @@ even_numbers=[]
 # list[1:4]=["Canada","Brazil","Germany"]
 # print(list)
 
+#Given a list of colors, replace the first two colors with only one color "Purple".
+# list=["Blue","White","Orange","Red"]
+# list[0:2]=["Purple"]
+# print(list)
+
+#Create a list of your favorite movies. Insert "Inception" at the second position.
+# list=["Superman","Man of steel","Batman"]
+# list.insert(1,"Inception")
+# print(list)
+
+
+
+
+
+# You have a list of students.
+# Remove the second and fourth students without using slicing — only using pop() or remove().
+
+# students=["X","Y","Z","C","B"]
+# students.pop(1)
+# students.remove("Z")
+# print(students)
+
+#Create a list of 7 random numbers.
+# Delete the third and last elements using two different methods (e.g., del for one and pop() for another).
+
+# import random
+# numbers=[]
+# for i in range(0,6):
+#     numbers.append(random.randint(1,100))
+# print(numbers)
+# del numbers[2]
+# numbers.pop(4)
+# print(numbers)
+
+
+# Given a list of fruits, remove "Apple" by value.
+# Then, remove the first item by index.
+# Finally, clear the entire list but do not delete the list itself.
+
+# fruits=["Apple","Orange","Mango","Pineapple"]
+# fruits.remove("Apple")
+# print(fruits)
 #
+# fruits.pop(0)
+# print(fruits)
+#
+# fruits.clear()
+# print(fruits)
+
+# Create a list with mixed elements (names and numbers).
+# Delete only all the number elements without using a loop (hint: you may need multiple remove() calls manually).
+
+# list=["Antar","Keya","Garbita",1,2,3]
+# updated_list=[]
+# for i in list:
+#     if not isinstance(i,int):
+#         updated_list.append(i)
+# print(updated_list)
+
+# city=["Dhaka","Chittagong","Mumbai","London","Paris","Sydney"]
+# del city[5]
+# print(city)
+# city.remove("Paris")
+# print(city)
+# del city
+
+def filter_list(l):
+    new_list=[]
+
+    for element in l:
+        if isinstance(element,int):
+            new_list.append(element)
+    return new_list
+
+
+l=[1,2,'a','b']
+print(filter_list(l))
 
 
 
