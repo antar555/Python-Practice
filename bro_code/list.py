@@ -190,25 +190,36 @@
 # print(max)
 
 #Remove Smallest Number
-def remove_smallest(numbers):
-    if not numbers:
-        return []
-    new_list=[]
-    minimum=min(numbers)
-    minimum_index=numbers.index(min(numbers))
-    print(minimum_index)
-    for index, number in enumerate(numbers):
-        if number>minimum or index>minimum_index:
+# def remove_smallest(numbers):
+#     if not numbers:
+#         return []
+#     new_list=[]
+#     minimum=min(numbers)
+#     minimum_index=numbers.index(min(numbers))
+#     print(minimum_index)
+#     for index, number in enumerate(numbers):
+#         if number>minimum or index>minimum_index:
+#
+#             new_list.append(number)
+#
+#
+#
+#
+#     return new_list
+#
+#
+#
+# numbers=[2,2,1,2,1]
+# print(remove_smallest(numbers))
 
-            new_list.append(number)
+#Still on the bus
+def number(bus_stops):
+    total=0
+    for stop in bus_stops:
+        total=total+stop[0]-stop[1]
+    return total
 
 
 
-
-    return new_list
-
-
-
-numbers=[2,2,1,2,1]
-print(remove_smallest(numbers))
-
+bus_stops=[[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]
+print(number(bus_stops))
