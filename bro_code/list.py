@@ -213,13 +213,29 @@
 # print(remove_smallest(numbers))
 
 #Still on the bus
-def number(bus_stops):
-    total=0
-    for stop in bus_stops:
-        total=total+stop[0]-stop[1]
-    return total
+# def number(bus_stops):
+#     total=0
+#     for stop in bus_stops:
+#         total=total+stop[0]-stop[1]
+#     return total
+#
+#
+#
+# bus_stops=[[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]
+# print(number(bus_stops))
+
+def binary_array_to_number(arr):
+
+    sum=0
+    for index, element in enumerate(arr):
+       if element==1:
+           sum=sum+pow(2,len(arr)-1-index)
+
+    return sum
 
 
 
-bus_stops=[[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]
-print(number(bus_stops))
+
+arr=[1,1,1,1]
+print(binary_array_to_number(arr))
+
