@@ -248,17 +248,20 @@ even_numbers=[]
 # print(city)
 # del city
 
-def filter_list(l):
-    new_list=[]
-
-    for element in l:
-        if isinstance(element,int):
-            new_list.append(element)
-    return new_list
-
-
-l=[1,2,'a','b']
-print(filter_list(l))
+# def filter_list(l):
+#     new_list=[]
+#
+#     for element in l:
+#         if isinstance(element,int):
+#             new_list.append(element)
+#     return new_list
+#
+#
+# l=[1,2,'a','b']
+# print(filter_list(l))
+numbers=[1,2,3,4,5]
+minimum_index=numbers.index(numbers)
+print(minimum_index)
 
 
 

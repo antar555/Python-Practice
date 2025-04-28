@@ -175,6 +175,40 @@
 # print(list)
 
 
+#printing index
+# fruits=["Apple","Banana","Cheery"]
+# # for index,value in enumerate(fruits):
+# #     print(index)
+# for i in range(len(fruits)):
+#     print(i,fruits[i])
+
+# numbers=[4,3,2,1]
+# max=0
+# for i in numbers:
+#     if i>max:
+#         max=i
+# print(max)
+
+#Remove Smallest Number
+def remove_smallest(numbers):
+    if not numbers:
+        return []
+    new_list=[]
+    minimum=min(numbers)
+    minimum_index=numbers.index(min(numbers))
+    print(minimum_index)
+    for index, number in enumerate(numbers):
+        if number>minimum or index>minimum_index:
+
+            new_list.append(number)
 
 
+
+
+    return new_list
+
+
+
+numbers=[2,2,1,2,1]
+print(remove_smallest(numbers))
 
