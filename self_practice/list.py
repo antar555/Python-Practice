@@ -259,9 +259,20 @@ even_numbers=[]
 #
 # l=[1,2,'a','b']
 # print(filter_list(l))
-numbers=[1,2,3,4,5]
-minimum_index=numbers.index(numbers)
-print(minimum_index)
+# numbers=[1,2,3,4,5]
+# minimum_index=numbers.index(numbers)
+# print(minimum_index)
+
+def process_data(data):
+    multiply=1
+    for element in data:
+        multiply=multiply*(element[0]-element[1])
+    return multiply
+
+data=[[2,5],[3,4],[8,7]]
+print(process_data(data))
+
+
 
 
 

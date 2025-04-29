@@ -224,6 +224,21 @@
 # bus_stops=[[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]
 # print(number(bus_stops))
 
+# def binary_array_to_number(arr):
+#
+#     sum=0
+#     for index, element in enumerate(arr):
+#        if element==1:
+#            sum=sum+pow(2,len(arr)-1-index)
+#
+#     return sum
+#
+#
+#
+#
+# arr=[1,1,1,1]
+# print(binary_array_to_number(arr))
+
 def binary_array_to_number(arr):
 
     sum=0
@@ -238,4 +253,3 @@ def binary_array_to_number(arr):
 
 arr=[1,1,1,1]
 print(binary_array_to_number(arr))
-
