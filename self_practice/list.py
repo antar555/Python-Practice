@@ -263,14 +263,69 @@ even_numbers=[]
 # minimum_index=numbers.index(numbers)
 # print(minimum_index)
 
-def process_data(data):
-    multiply=1
-    for element in data:
-        multiply=multiply*(element[0]-element[1])
-    return multiply
+# def process_data(data):
+#     multiply=1
+#     for element in data:
+#         multiply=multiply*(element[0]-element[1])
+#     return multiply
+#
+# data=[[2,5],[3,4],[8,7]]
+# print(process_data(data))
 
-data=[[2,5],[3,4],[8,7]]
-print(process_data(data))
+your_string="24z6 1x23 y369 89a 900b"
+your_string=your_string.split()
+combined=[]
+# print(your_string)
+another_string_digit=""
+another_string_letter=""
+for word in your_string:
+    temp_digit=""
+    temp_letter=""
+    for char in word:
+        if char.isdigit():
+            temp_digit=temp_digit+char
+        elif char.isalpha():
+            temp_letter=temp_letter+char
+    combined.append((temp_letter,temp_digit))
+
+
+
+    another_string_letter=another_string_letter+temp_letter+" "
+    another_string_digit=another_string_digit+temp_digit+" "
+
+combined.sort()
+
+
+
+
+# print(another_string_digit.strip())
+# print(another_string_letter.strip())
+# print(combined)
+
+numbers=[]
+for item in combined:
+
+    numbers.append(int(item[1]))
+
+result=numbers[0]
+
+for i in range(1,len(numbers)):
+    if (i-1)%4==0:
+        result=result+numbers[i]
+    elif (i-1)%4==1:
+        result=result-numbers[i]
+    elif(i-1)%4==2:
+        result=result*numbers[i]
+    elif(i-1)%4==3:
+        result=result//numbers[i]
+
+
+
+
+print(result)
+# print(numbers)
+
+
 
 
 
