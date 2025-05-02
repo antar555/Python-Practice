@@ -131,3 +131,78 @@
 #
 # your_string="24z6 1x23 y369 89a 900b"
 # print(do_math(your_string))
+
+# number=12
+# for i in range(1,13,1):
+#     if number%i==0:
+#         print(i)
+# https://www.codewars.com/kata/5e030f77cec18900322c535d/train/python
+
+
+
+def hit_or_stay(hand,next_card):
+    has_ace_in_hand = False
+    has_ace_next=False
+    sum=0
+    if next_card in ['K','Q','J','T']:
+        next_card=10
+
+    elif next_card=='A':
+        next_card=11
+        has_ace_next=True
+    else:
+        next_card=int(next_card)
+
+
+
+    for val in hand:
+        if val=='K' or val=='Q' or val=='J' or val=='T':
+            sum=sum+10
+
+        elif val=='A':
+            sum=sum+11
+            has_ace_in_hand=True
+
+        else:
+            sum=sum+int(val)
+
+    if sum>21 and (has_ace_in_hand or has_ace_next):
+        sum=sum-10
+
+
+    if sum<17:
+        sum=sum+next_card
+        if sum > 21 and (has_ace_in_hand or has_ace_next):
+            sum = sum - 10
+        return ['hit',sum]
+    elif sum>17:
+        if sum > 21 and (has_ace_in_hand or has_ace_next):
+            sum = sum - 10
+        return ['stay',sum]
+    elif sum==17:
+        if 'A' in hand:
+            sum=sum+next_card
+            if sum > 21 and (has_ace_in_hand or has_ace_next):
+                sum = sum - 10
+            return ['hit',sum]
+        else:
+            return ['stay',sum]
+
+
+hand=[5,'A']
+next_card='A'
+print(hit_or_stay(hand,next_card))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
