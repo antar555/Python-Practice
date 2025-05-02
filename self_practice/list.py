@@ -272,60 +272,90 @@ even_numbers=[]
 # data=[[2,5],[3,4],[8,7]]
 # print(process_data(data))
 
-your_string="24z6 1x23 y369 89a 900b"
-your_string=your_string.split()
-combined=[]
-# print(your_string)
-another_string_digit=""
-another_string_letter=""
-for word in your_string:
-    temp_digit=""
-    temp_letter=""
-    for char in word:
-        if char.isdigit():
-            temp_digit=temp_digit+char
-        elif char.isalpha():
-            temp_letter=temp_letter+char
-    combined.append((temp_letter,temp_digit))
-
-
-
-    another_string_letter=another_string_letter+temp_letter+" "
-    another_string_digit=another_string_digit+temp_digit+" "
-
-combined.sort()
-
-
-
-
-# print(another_string_digit.strip())
-# print(another_string_letter.strip())
-# print(combined)
-
-numbers=[]
-for item in combined:
-
-    numbers.append(int(item[1]))
-
-result=numbers[0]
-
-for i in range(1,len(numbers)):
-    if (i-1)%4==0:
-        result=result+numbers[i]
-    elif (i-1)%4==1:
-        result=result-numbers[i]
-    elif(i-1)%4==2:
-        result=result*numbers[i]
-    elif(i-1)%4==3:
-        result=result//numbers[i]
-
-
-
-
-print(result)
+# your_string="24z6 1x23 y369 89a 900b"
+# your_string=your_string.split()
+# combined=[]
+# # print(your_string)
+# another_string_digit=""
+# another_string_letter=""
+# for word in your_string:
+#     temp_digit=""
+#     temp_letter=""
+#     for char in word:
+#         if char.isdigit():
+#             temp_digit=temp_digit+char
+#         elif char.isalpha():
+#             temp_letter=temp_letter+char
+#     combined.append((temp_letter,temp_digit))
+#
+#
+#
+#     another_string_letter=another_string_letter+temp_letter+" "
+#     another_string_digit=another_string_digit+temp_digit+" "
+#
+# combined.sort()
+#
+#
+#
+#
+# # print(another_string_digit.strip())
+# # print(another_string_letter.strip())
+# # print(combined)
+#
+# numbers=[]
+# for item in combined:
+#
+#     numbers.append(int(item[1]))
+#
+# result=numbers[0]
+#
+# for i in range(1,len(numbers)):
+#     if (i-1)%4==0:
+#         result=result+numbers[i]
+#     elif (i-1)%4==1:
+#         result=result-numbers[i]
+#     elif(i-1)%4==2:
+#         result=result*numbers[i]
+#     elif(i-1)%4==3:
+#         result=result//numbers[i]
+#
+#
+#
+#
+# print(result)
 # print(numbers)
 
+def try_or_stay(hand, next_card):
+    sum=0
+    if next_card in ['K','Q','T','J']:
+        next_card=10
+    elif next_card=='A':
+        next_card=11
+    else:
+        next_card=int(next_card)
+    for val in hand:
+        if val in ['K','Q','T','J']:
+            sum=sum+10
+        elif val=='A':
+            sum=sum+11
+        else:
+            sum=sum+int(val)
+    if sum<17:
+        sum=sum+next_card
+        return ['hit',sum]
+    elif sum>17:
+        return ['stay',sum]
+    elif sum==17:
+        sum=sum+next_card
+        if 'A' in hand:
+            sum=sum-10
+            return['hit',sum]
 
+
+
+hand=['A',6]
+next_card='A'
+print(try_or_stay(hand,next_card))
 
 
 
