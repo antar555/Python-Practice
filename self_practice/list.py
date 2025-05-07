@@ -416,29 +416,35 @@ even_numbers=[]
 # a=[12,13]
 # print(sum_of_products(a))
 
-def likes(names):
-    new_name=[]
-    if not names:
-        return "no one likes this"
-    else:
-        for name in names:
-            new_name.append(name)
-        if len(new_name)==3:
+# def likes(names):
+#     new_name=[]
+#     if not names:
+#         return "no one likes this"
+#     else:
+#         for name in names:
+#             new_name.append(name)
+#         if len(new_name)==3:
+#
+#             return f"{', '.join(new_name[:-1])} and {new_name[-1]} like this"
+#         elif len(new_name)==2:
+#             return f"{' and '.join(new_name)} like this"
+#
+#         elif len(new_name)==1:
+#             return f"{new_name[0]} likes this"
+#
+#         else:
+#             return f"{new_name[0]}, {new_name[1]} and {len(new_name)-2} others like this"
+#
+#
+#
+# names=["Peter","Tony","Spidey"]
+# print(likes(names))
 
-            return f"{', '.join(new_name[:-1])} and {new_name[-1]} like this"
-        elif len(new_name)==2:
-            return f"{' and '.join(new_name)} like this"
-
-        elif len(new_name)==1:
-            return f"{new_name[0]} likes this"
-
-        else:
-            return f"{new_name[0]}, {new_name[1]} and {len(new_name)-2} others like this"
+# numbers=[1,2,3]
+# for num in numbers:
+#     print(num,end=" ")
 
 
-
-names=["Peter","Tony","Spidey"]
-print(likes(names))
 
 
 
