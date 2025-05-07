@@ -325,58 +325,120 @@ even_numbers=[]
 # print(result)
 # print(numbers)
 
-def hit_or_stay(hand, next_card):
-    ace_next_card=False
-    sum=0
-    if next_card in ['K','Q','T','J']:
-        next_card=10
-    elif next_card=='A':
-        next_card=11
-        ace_next_card=True
+# def hit_or_stay(hand, next_card):
+#     ace_next_card=False
+#     sum=0
+#     if next_card in ['K','Q','T','J']:
+#         next_card=10
+#     elif next_card=='A':
+#         next_card=11
+#         ace_next_card=True
+#
+#     else:
+#         next_card=int(next_card)
+#     for val in hand:
+#         if val in ['K','Q','T','J']:
+#             sum=sum+10
+#         elif val=='A':
+#             sum=sum+11
+#         else:
+#             sum=sum+int(val)
+#
+#     if sum>21 and 'A' in hand:
+#         sum=sum-10
+#     if sum<17:
+#         sum=sum+next_card
+#         if 'A' in hand and sum>21:
+#             sum=sum-10
+#         elif ace_next_card and sum>21:
+#             sum=sum-10
+#         return ['hit',sum]
+#     elif sum>17:
+#         if 'A' in hand and sum>21:
+#             sum=sum-10
+#
+#         return ['stay',sum]
+#     elif sum==17:
+#
+#         if 'A' in hand or sum>21:
+#             sum=(sum+next_card)-10
+#             return ['hit',sum]
+#         else:
+#
+#             return ['stay',sum]
+#
+#
+#
+#
+# hand=['J',3]
+# next_card='A'
+# print(hit_or_stay(hand,next_card))
 
+# def sum_of_products(a):
+#     sum=0
+#     mul=1
+#     if len(a)==2:
+#         for val in a:
+#             sum = sum + val
+#
+#         for val in a:
+#             mul = mul * val
+#
+#         sum = sum + mul
+#         return sum
+#
+#
+#
+#
+#     else:
+#         for val in a:
+#             sum = sum + val
+#
+#         for val in a:
+#             mul = mul * val
+#
+#         sum = sum + mul
+#
+#
+#         for i in range(len(a)):
+#             for j in range(i+1,len(a)):
+#                 sum=sum+a[i]*a[j]
+#
+#         return sum
+#
+#
+#
+#
+#
+#
+#
+#
+# a=[12,13]
+# print(sum_of_products(a))
+
+def likes(names):
+    new_name=[]
+    if not names:
+        return "no one likes this"
     else:
-        next_card=int(next_card)
-    for val in hand:
-        if val in ['K','Q','T','J']:
-            sum=sum+10
-        elif val=='A':
-            sum=sum+11
+        for name in names:
+            new_name.append(name)
+        if len(new_name)==3:
+
+            return f"{', '.join(new_name[:-1])} and {new_name[-1]} like this"
+        elif len(new_name)==2:
+            return f"{' and '.join(new_name)} like this"
+
+        elif len(new_name)==1:
+            return f"{new_name[0]} likes this"
+
         else:
-            sum=sum+int(val)
-
-    if sum>21 and 'A' in hand:
-        sum=sum-10
-    if sum<17:
-        sum=sum+next_card
-        if 'A' in hand and sum>21:
-            sum=sum-10
-        elif ace_next_card and sum>21:
-            sum=sum-10
-        return ['hit',sum]
-    elif sum>17:
-        if 'A' in hand and sum>21:
-            sum=sum-10
-
-        return ['stay',sum]
-    elif sum==17:
-
-        if 'A' in hand or sum>21:
-            sum=(sum+next_card)-10
-            return ['hit',sum]
-        else:
-
-            return ['stay',sum]
+            return f"{new_name[0]}, {new_name[1]} and {len(new_name)-2} others like this"
 
 
 
-
-hand=['J',3]
-next_card='A'
-print(hit_or_stay(hand,next_card))
-
-
-
-
+names=["Peter","Tony","Spidey"]
+print(likes(names))
 
 
 
