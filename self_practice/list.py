@@ -445,6 +445,31 @@ even_numbers=[]
 #     print(num,end=" ")
 
 
+# numbers=[19,5,42,2,77]
+# new_numbers=[]
+#
+# min_num=min(numbers)
+#
+# for num in numbers:
+#     if num>min_num:
+#         new_numbers.append(num)
+#
+# print(new_numbers)
+#
+# print(min(new_numbers)+min_num)
+
+def sum_two_smallest_numbers(numbers):
+    new_numbers=[]
+    min_num=min(numbers)
+    for num in numbers:
+        if num>min_num:
+            new_numbers.append(num)
+
+    min_new_num=min(new_numbers)
+    return min_new_num+min_num
+
+numbers=[5, 8, 12, 18, 22]
+print(sum_two_smallest_numbers(numbers))
 
 
 
