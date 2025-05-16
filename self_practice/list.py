@@ -458,19 +458,26 @@ even_numbers=[]
 #
 # print(min(new_numbers)+min_num)
 
-def sum_two_smallest_numbers(numbers):
-    new_numbers=[]
-    min_num=min(numbers)
+# def sum_two_smallest_numbers(numbers):
+#     new_numbers=[]
+#     min_num=min(numbers)
+#     for num in numbers:
+#         if num>min_num:
+#             new_numbers.append(num)
+#
+#     min_new_num=min(new_numbers)
+#     return min_new_num+min_num
+#
+# numbers=[5, 8, 12, 18, 22]
+# print(sum_two_smallest_numbers(numbers))
+
+def square_sum(numbers):
+    sum=0
     for num in numbers:
-        if num>min_num:
-            new_numbers.append(num)
-
-    min_new_num=min(new_numbers)
-    return min_new_num+min_num
-
-numbers=[5, 8, 12, 18, 22]
-print(sum_two_smallest_numbers(numbers))
-
+        sum=num*num+sum
+    return sum
+numbers=[]
+print(square_sum(numbers))
 
 
 
