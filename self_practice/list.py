@@ -471,15 +471,44 @@ even_numbers=[]
 # numbers=[5, 8, 12, 18, 22]
 # print(sum_two_smallest_numbers(numbers))
 
-def square_sum(numbers):
-    sum=0
-    for num in numbers:
-        sum=num*num+sum
-    return sum
-numbers=[]
-print(square_sum(numbers))
+# def square_sum(numbers):
+#     sum=0
+#     for num in numbers:
+#         sum=num*num+sum
+#     return sum
+# numbers=[]
+# print(square_sum(numbers))
+
+# class SquareSum:
+#     def __init__(self,numbers):
+#         self.numbers=numbers
+#         self.sum=0
+#         for num in self.numbers:
+#             self.sum=num*num+self.sum
+#
+#     def __str__(self):
+#         return f"Square Sum: {self.sum}"
+#
+#
+# SquareSum1=SquareSum([1,2,4])
+# print(SquareSum1)
 
 
+class Volume:
+    def __init__(self,length,width,height):
+        self.length=length
+        self.width=width
+        self.height=height
+        self.result=self.length*self.width*self.height
+
+    def get_volume_of_cuboid(self):
+        return self.result
+
+
+
+
+Volume1=Volume(1,2,3)
+print(Volume1.get_volume_of_cuboid())
 
 
 
