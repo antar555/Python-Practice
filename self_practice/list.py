@@ -494,22 +494,62 @@ even_numbers=[]
 # print(SquareSum1)
 
 
-class Volume:
-    def __init__(self,length,width,height):
-        self.length=length
-        self.width=width
-        self.height=height
-        self.result=self.length*self.width*self.height
+# class Volume:
+#     def __init__(self,length,width,height):
+#         self.length=length
+#         self.width=width
+#         self.height=height
+#         self.result=self.length*self.width*self.height
+#
+#     def get_volume_of_cuboid(self):
+#         return self.result
+#
+#
+#
+#
+# Volume1=Volume(1,2,3)
+# print(Volume1.get_volume_of_cuboid())
 
-    def get_volume_of_cuboid(self):
-        return self.result
+
+def two_highest(arg1):
+    if not arg1:
+        return []
+
+    number=[]
+    max_num=float('-inf')
+    second_max=float('-inf')
+    third_max=float('-inf')
+
+    if arg1.count(arg1[0])==len(arg1):
+        number.append(arg1[0])
+
+    else:
+        for num in arg1:
+            if num==max_num or num==second_max or num==third_max:
+                continue
+            if num>max_num:
+                third_max=second_max
+                second_max=max_num
+                max_num=num
+
+            elif num>second_max:
+                third_max=second_max
+                second_max=num
+
+            elif num>third_max:
+                third_max=num
+        number.append(max_num)
+        number.append(second_max)
+        number.append(third_max)
+
+    return number
 
 
 
 
-Volume1=Volume(1,2,3)
-print(Volume1.get_volume_of_cuboid())
 
+arg1=[4,10,10,9]
+print(two_highest(arg1))
 
 
 

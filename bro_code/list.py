@@ -190,27 +190,27 @@
 # print(max)
 
 #Remove Smallest Number
-def remove_smallest(numbers):
-    if not numbers:
-        return []
-    new_list=[]
-    minimum=min(numbers)
-    minimum_index=numbers.index(min(numbers))
-    print(minimum_index)
-    for index, number in enumerate(numbers):
-        if number>minimum or index>minimum_index:
-
-            new_list.append(number)
-
-
-
-
-    return new_list
-
-
-
-numbers=[2,2,1,2,1]
-print(remove_smallest(numbers))
+# def remove_smallest(numbers):
+#     if not numbers:
+#         return []
+#     new_list=[]
+#     minimum=min(numbers)
+#     minimum_index=numbers.index(min(numbers))
+#     print(minimum_index)
+#     for index, number in enumerate(numbers):
+#         if number>minimum or index>minimum_index:
+#
+#             new_list.append(number)
+#
+#
+#
+#
+#     return new_list
+#
+#
+#
+# numbers=[2,2,1,2,1]
+# print(remove_smallest(numbers))
 
 #Still on the bus
 # def number(bus_stops):
@@ -253,3 +253,16 @@ print(remove_smallest(numbers))
 #
 # arr=[1,1,1,1]
 # print(binary_array_to_number(arr))
+
+def sum_two_smallest_numbers(numbers):
+    new_numbers=[]
+    min_num=min(numbers)
+    for num in numbers:
+        if num>min_num:
+            new_numbers.append(num)
+
+    min_new_num=min(new_numbers)
+    return min_new_num+min_num
+
+numbers=[5, 8, 12, 18, 22]
+print(sum_two_smallest_numbers(numbers))
