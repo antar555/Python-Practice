@@ -617,20 +617,64 @@ even_numbers=[]
 # arr=['a','b']
 # print(explode(arr))
 
-def explode(arr):
-    if type(arr[0])==int and type(arr[1])==int:
-        return [arr]*sum(arr)
-    elif type(arr[0])!=int and type(arr[1])==int:
-        return [arr]*arr[1]
-    elif type(arr[0])==int and type(arr[1])!=int:
-        return [arr]*arr[0]
-    else:
-        return "Void"
+# def explode(arr):
+#     if type(arr[0])==int and type(arr[1])==int:
+#         return [arr]*sum(arr)
+#     elif type(arr[0])!=int and type(arr[1])==int:
+#         return [arr]*arr[1]
+#     elif type(arr[0])==int and type(arr[1])!=int:
+#         return [arr]*arr[0]
+#     else:
+#         return "Void"
+#
+#
+#
+# arr=['a','b']
+# print(explode(arr))
+
+
+# def explode(arr):
+#     sum=0
+#
+#     for element in arr:
+#         if isinstance(element,int):
+#             sum=sum+element
+#
+#     if all(isinstance(element,str) and len(element)==1 for element in arr):
+#         return "Void"
+#
+#     return [arr]*sum
+#
+#
+#
+#
+# arr=['b','a']
+# print(explode(arr))
+
+def sum_array(arr):
+    if arr==None:
+        return 0
+    if len(arr)==1 or not arr:
+        return 0
+    number=[]
+    max_number=max(arr)
+    min_number=min(arr)
+    sum=0
+
+    for num in arr:
+        if num!=max_number and num!=min_number:
+            number.append(num)
+        elif arr.count(num)>1 and not num in number:
+            number.append(num)
 
 
 
-arr=['a','b']
-print(explode(arr))
 
+    for element in number:
+        sum=sum+element
 
+    return sum
+
+arr=None
+print(sum_array(arr))
 
