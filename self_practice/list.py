@@ -511,45 +511,112 @@ even_numbers=[]
 # print(Volume1.get_volume_of_cuboid())
 
 
-def two_highest(arg1):
-    if not arg1:
-        return []
+# def two_highest(arg1):
+#     if not arg1:
+#         return []
+#
+#     number=[]
+#     max_num=float('-inf')
+#     second_max=float('-inf')
+#     third_max=float('-inf')
+#
+#     if arg1.count(arg1[0])==len(arg1):
+#         number.append(arg1[0])
+#
+#     else:
+#         for num in arg1:
+#             if num==max_num or num==second_max or num==third_max:
+#                 continue
+#             if num>max_num:
+#                 third_max=second_max
+#                 second_max=max_num
+#                 max_num=num
+#
+#             elif num>second_max:
+#                 third_max=second_max
+#                 second_max=num
+#
+#             elif num>third_max:
+#                 third_max=num
+#         number.append(max_num)
+#         number.append(second_max)
+#         number.append(third_max)
+#
+#     return number
+#
+#
+#
+#
+#
+# arg1=[4,10,10,9]
+# print(two_highest(arg1))
 
+
+# def two_highest(arg1):
+#     if not arg1:
+#         return []
+#
+#     number=[]
+#     max_num=float('-inf')
+#     second_max=float('-inf')
+#
+#
+#     if arg1.count(arg1[0])==len(arg1):
+#         number.append(arg1[0])
+#
+#     else:
+#         for num in arg1:
+#             if num==max_num or num==second_max:
+#                 continue
+#             if num>max_num:
+#
+#                 second_max=max_num
+#                 max_num=num
+#
+#             elif num>second_max:
+#                 second_max=num
+#
+#
+#
+#
+#         number.append(max_num)
+#         number.append(second_max)
+#
+#
+#     return number
+#
+#
+#
+#
+#
+# arg1=[4,10,9]
+# print(two_highest(arg1))
+
+# def monkey_count(n):
+#     return [i for i in range(1,n+1)]
+# n=10
+# print(monkey_count(n))
+
+def explode(arr):
     number=[]
-    max_num=float('-inf')
-    second_max=float('-inf')
-    third_max=float('-inf')
+    sum=0
+    for element in arr:
+        if isinstance(element,(int,float)):
+            sum=sum+element
 
-    if arg1.count(arg1[0])==len(arg1):
-        number.append(arg1[0])
+    if all(isinstance(element,str) and len(element)==1 for element in arr):
+        return "Void!"
 
-    else:
-        for num in arg1:
-            if num==max_num or num==second_max or num==third_max:
-                continue
-            if num>max_num:
-                third_max=second_max
-                second_max=max_num
-                max_num=num
 
-            elif num>second_max:
-                third_max=second_max
-                second_max=num
 
-            elif num>third_max:
-                third_max=num
-        number.append(max_num)
-        number.append(second_max)
-        number.append(third_max)
 
+    for _ in range(1,sum+1):
+        number.append(arr)
     return number
 
+arr=['a','b']
+print(explode(arr))
 
-
-
-
-arg1=[4,10,10,9]
-print(two_highest(arg1))
 
 
 
