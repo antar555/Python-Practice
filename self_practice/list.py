@@ -597,27 +597,40 @@ even_numbers=[]
 # n=10
 # print(monkey_count(n))
 
+# def explode(arr):
+#     number=[]
+#     sum=0
+#     for element in arr:
+#         if isinstance(element,(int,float)):
+#             sum=sum+element
+#
+#     if all(isinstance(element,str) and len(element)==1 for element in arr):
+#         return "Void!"
+#
+#
+#
+#
+#     for _ in range(1,sum+1):
+#         number.append(arr)
+#     return number
+#
+# arr=['a','b']
+# print(explode(arr))
+
 def explode(arr):
-    number=[]
-    sum=0
-    for element in arr:
-        if isinstance(element,(int,float)):
-            sum=sum+element
-
-    if all(isinstance(element,str) and len(element)==1 for element in arr):
-        return "Void!"
-
-
+    if type(arr[0])==int and type(arr[1])==int:
+        return [arr]*sum(arr)
+    elif type(arr[0])!=int and type(arr[1])==int:
+        return [arr]*arr[1]
+    elif type(arr[0])==int and type(arr[1])!=int:
+        return [arr]*arr[0]
+    else:
+        return "Void"
 
 
-    for _ in range(1,sum+1):
-        number.append(arr)
-    return number
 
 arr=['a','b']
 print(explode(arr))
-
-
 
 
 
