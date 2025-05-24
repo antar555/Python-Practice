@@ -651,30 +651,43 @@ even_numbers=[]
 # arr=['b','a']
 # print(explode(arr))
 
-def sum_array(arr):
-    if arr==None:
-        return 0
-    if len(arr)==1 or not arr:
-        return 0
-    number=[]
-    max_number=max(arr)
-    min_number=min(arr)
+# def sum_array(arr):
+#     if arr==None:
+#         return 0
+#     if len(arr)==1 or not arr:
+#         return 0
+#     number=[]
+#     max_number=max(arr)
+#     min_number=min(arr)
+#     sum=0
+#
+#     for num in arr:
+#         if num!=max_number and num!=min_number:
+#             number.append(num)
+#         elif arr.count(num)>1 and not num in number:
+#             number.append(num)
+#
+#
+#
+#
+#     for element in number:
+#         sum=sum+element
+#
+#     return sum
+#
+# arr=None
+# print(sum_array(arr))
+
+
+def sum_array(a):
     sum=0
-
-    for num in arr:
-        if num!=max_number and num!=min_number:
-            number.append(num)
-        elif arr.count(num)>1 and not num in number:
-            number.append(num)
-
-
-
-
-    for element in number:
-        sum=sum+element
-
+    for num in a:
+        sum=sum+num
     return sum
 
-arr=None
-print(sum_array(arr))
+a=range(101)
+print(sum_array(a))
+
+
+
 
