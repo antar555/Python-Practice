@@ -679,14 +679,29 @@ even_numbers=[]
 # print(sum_array(arr))
 
 
-def sum_array(a):
-    sum=0
-    for num in a:
-        sum=sum+num
-    return sum
+# def sum_array(a):
+# #     sum=0
+# #     for num in a:
+# #         sum=sum+num
+# #     return sum
+# #
+# # a=range(101)
+# # print(sum_array(a))
 
-a=range(101)
-print(sum_array(a))
+def series_sum(n):
+    sum=0
+    p=1
+    q=1
+    for i in range(1,n+1,1):
+
+        sum=sum+(p/q)
+        q=q+3
+
+
+    return f"{sum:.2f}"
+n=5
+print(str(series_sum(n)))
+
 
 
 
