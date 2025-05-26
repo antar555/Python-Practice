@@ -690,8 +690,7 @@ even_numbers=[]
 
 def series_sum(n):
     sum=0
-    p=1
-    q=1
+    p=q=1
     for i in range(1,n+1,1):
 
         sum=sum+(p/q)
