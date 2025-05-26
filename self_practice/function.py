@@ -193,14 +193,41 @@
 # next_card='A'
 # print(hit_or_stay(hand,next_card))
 
-def is_triangle(a,b,c):
-    if a+b>c and b+c>a and a+c>b:
-        return True
-    else:
-        return False
+# def is_triangle(a,b,c):
+#     if a+b>c and b+c>a and a+c>b:
+#         return True
+#     else:
+#         return False
+#
+# a,b,c=1,2,2
+# print(is_triangle(a,b,c))
 
-a,b,c=1,2,2
-print(is_triangle(a,b,c))
+# import math
+# def find_next_square(sq):
+#     sq_root=math.sqrt(sq)
+#     if sq_root.is_integer():
+#         next_sq = (sq_root + 1) ** 2
+#         return next_sq
+#     else:
+#         return -1
+#
+#
+#
+#
+# sq=114
+# print(find_next_square(sq))
+
+def odd_or_even(arr):
+    sum=0
+    for num in arr:
+        sum=sum+num
+    if sum%2==0:
+        return "even"
+    else:
+        return "odd"
+
+arr=[0]
+print(odd_or_even(arr))
 
 
 
