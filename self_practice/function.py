@@ -217,18 +217,25 @@
 # sq=114
 # print(find_next_square(sq))
 
-def odd_or_even(arr):
+# def odd_or_even(arr):
+#     sum=0
+#     for num in arr:
+#         sum=sum+num
+#     if sum%2==0:
+#         return "even"
+#     else:
+#         return "odd"
+#
+# arr=[0]
+# print(odd_or_even(arr))
+
+def summation(n):
     sum=0
-    for num in arr:
-        sum=sum+num
-    if sum%2==0:
-        return "even"
-    else:
-        return "odd"
-
-arr=[0]
-print(odd_or_even(arr))
-
+    for i in range(1,n+1,1):
+        sum=sum+i
+    return sum
+n=8
+print(summation(n))
 
 
 
